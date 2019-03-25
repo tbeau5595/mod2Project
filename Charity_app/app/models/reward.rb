@@ -1,4 +1,4 @@
 class Reward < ApplicationRecord
-    has_many :userrewards
-    has_many :users, through: :userrewards
+    has_many :user_rewards
+    has_many :users, through: :user_rewards
 end

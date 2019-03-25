@@ -4,7 +4,7 @@ class UserRewardsController < ApplicationController
     end
 
     def show
-
+        @user_reward = UserReward.find(params[:id])
     end
 
     def new

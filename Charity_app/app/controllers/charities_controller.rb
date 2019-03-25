@@ -1,10 +1,10 @@
 class CharitiesController < ApplicationController
     def index
-
+        @charities = Charity.find(params[:id])
     end
 
     def show
-
+        @charity = Charity.find(params[:id])
     end
 
     def new

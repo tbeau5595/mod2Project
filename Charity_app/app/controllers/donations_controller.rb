@@ -4,7 +4,7 @@ class DonationsController < ApplicationController
     end
 
     def show
-
+        @donation = Donation.find(params[:id])
     end
 
     def new
