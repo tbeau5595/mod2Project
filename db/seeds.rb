@@ -12,6 +12,7 @@ Charity.destroy_all
 Reward.destroy_all
 UserReward.destroy_all
 
+<<<<<<< HEAD
 # 30.times do 
 #     user = User.create({
 #       name: Faker::name.name,
@@ -43,41 +44,42 @@ Reward.create(level: "bronze")
 Reward.create(level: "silver")
 Reward.create(level: "gold")
 Reward.create(level: "platinum")
+=======
+30.times do 
+    User.create(
+    name: Faker::Name.unique.name,
+    account_number: Faker::Bank.unique.account_number
+    )
+end
+>>>>>>> 5484c9f23fb6daec1e620c8aa4aba3d80cc296d1
   
-UserReward.create(user_id: 1, reward_id: 1)
-UserReward.create(user_id: 2, reward_id: 2)
-UserReward.create(user_id: 3, reward_id: 3)
-UserReward.create(user_id: 4, reward_id: 4)
 
 
-Donation.create(user_id: 1, charity_id: 2, amount: 20)
-Donation.create(user_id: 1, charity_id: 1, amount: 20)
-Donation.create(user_id: 1, charity_id: 3, amount: 20)
-Donation.create(user_id: 1, charity_id: 4, amount: 20)
-Donation.create(user_id: 1, charity_id: 5, amount: 20)
-Donation.create(user_id: 2, charity_id: 1, amount: 20)
-Donation.create(user_id: 2, charity_id: 2, amount: 200)
-Donation.create(user_id: 2, charity_id: 3, amount: 20)
-Donation.create(user_id: 2, charity_id: 4, amount: 20)
-Donation.create(user_id: 2, charity_id: 5, amount: 20)
-Donation.create(user_id: 3, charity_id: 1, amount: 20)
-Donation.create(user_id: 3, charity_id: 2, amount: 20)
-Donation.create(user_id: 3, charity_id: 3, amount: 20)
-Donation.create(user_id: 3, charity_id: 4, amount: 450)
-Donation.create(user_id: 3, charity_id: 5, amount: 20)
-Donation.create(user_id: 4, charity_id: 1, amount: 20)
-Donation.create(user_id: 4, charity_id: 2, amount: 20)
-Donation.create(user_id: 4, charity_id: 3, amount: 20)
-Donation.create(user_id: 4, charity_id: 4, amount: 20)
-Donation.create(user_id: 4, charity_id: 5, amount: 1000)
+10.times do
+    Charity.create(
+    name: Faker::Company.unique.name,
+    description: Faker::Company.industry    
+    )
+end
 
-# 10.times do
-#     charity = Charity.create({
-#       name: Faker::name.initials
-#       description: Faker::lorem.paragraph    
-#     })
-# end
+100.times do
+    Donation.create(
+    user_id: User.all.sample.id,
+    charity_id: Charity.all.sample.id,
+    amount: Faker::Number.within(1..100),      
+    )
+end
 
+Reward.create(level: "Bronze")
+Reward.create(level: "Silver")
+Reward.create(level: "Gold")
+Reward.create(level: "Platinum")
 
+def create_user_reward
+    User.all.each do |user|
+        UserReward.create(user_id: user.id, reward: Reward.find_by(level: "Bronze"))
+    end
+end
 
-# donation = donations.map { |donation| donation.merge( { user_id: User.all.sample.id, charity_id: Charity.all.sample.id } ) }
+create_user_reward
+puts "Hello"
