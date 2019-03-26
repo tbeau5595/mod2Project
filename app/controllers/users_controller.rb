@@ -10,7 +10,7 @@ class UsersController < ApplicationController
         @user_reward = UserReward.find_by(user_id: @user.id)
         total = 0
         @user.donations.each do |donation|
-            total += donation.amount            
+            total += donation.amount         
         end
             if total < 100
                 @user_reward.update(reward_id: 1)
