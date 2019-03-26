@@ -28,7 +28,7 @@ end
     )
 end
 
-30.times do
+100.times do
     Donation.create(
     user_id: User.all.sample.id,
     charity_id: Charity.all.sample.id,
