@@ -5587,3 +5587,754 @@ Processing by DonationsController#new as HTML
 Completed 200 OK in 437ms (Views: 428.1ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/users/1" for ::1 at 2019-03-25 16:54:04 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReward Load (0.2ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" INNER JOIN "user_rewards" ON "rewards"."id" = "user_rewards"."reward_id" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  [1m[36mDonation Load (0.2ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (75.4ms)
+Completed 200 OK in 349ms (Views: 304.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for ::1 at 2019-03-26 09:31:06 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2.1/lib/rails/templates/rails/welcome/index.html.erb (7.2ms)
+Completed 200 OK in 53ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2019-03-26 09:31:11 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReward Load (1.7ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" INNER JOIN "user_rewards" ON "rewards"."id" = "user_rewards"."reward_id" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  [1m[36mDonation Load (1.5ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mCharity Load (1.4ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (1.8ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (139.7ms)
+Completed 200 OK in 454ms (Views: 387.5ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/charities" for ::1 at 2019-03-26 09:31:35 -0500
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  ↳ app/views/charities/index.html.erb:3
+  Rendered charities/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/donations/new" for ::1 at 2019-03-26 09:31:37 -0500
+Processing by DonationsController#new as HTML
+  Rendering donations/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/donations/new.html.erb:3
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  ↳ app/views/donations/new.html.erb:6
+  Rendered donations/new.html.erb within layouts/application (499.2ms)
+Completed 200 OK in 563ms (Views: 551.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/donations" for ::1 at 2019-03-26 09:31:43 -0500
+Processing by DonationsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JSy5/veXOVw5HdASwPk2JfbtRWoP83uvwV6VyXRqHmJZ7rsQRbt+KOCRn9A0KGgMgqDvFZWP8Xt4kPNfLJX9NA==", "donation"=>{"user_id"=>"1", "charity_id"=>"1", "amount"=>"300"}, "commit"=>"Donate!"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/donations_controller.rb:20
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/donations_controller.rb:20
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/donations_controller.rb:20
+  [1m[36mDonation Create (2.4ms)[0m  [1m[32mINSERT INTO "donations" ("user_id", "charity_id", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["charity_id", 1], ["amount", 300], ["created_at", "2019-03-26 14:31:43.453422"], ["updated_at", "2019-03-26 14:31:43.453422"]]
+  ↳ app/controllers/donations_controller.rb:20
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/donations_controller.rb:20
+Redirected to http://localhost:3000/users
+Completed 200 OK in 16ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/users" for ::1 at 2019-03-26 09:31:43 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 77ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for ::1 at 2019-03-26 09:31:46 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReward Load (0.2ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" INNER JOIN "user_rewards" ON "rewards"."id" = "user_rewards"."reward_id" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  [1m[36mDonation Load (0.2ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (4.8ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 102ms (Views: 85.6ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/users/1" for ::1 at 2019-03-26 09:33:04 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReward Load (0.2ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" INNER JOIN "user_rewards" ON "rewards"."id" = "user_rewards"."reward_id" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  [1m[36mDonation Load (0.4ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 75ms (Views: 64.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1" for ::1 at 2019-03-26 09:33:06 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReward Load (0.2ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" INNER JOIN "user_rewards" ON "rewards"."id" = "user_rewards"."reward_id" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  [1m[36mDonation Load (0.3ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 81ms (Views: 68.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/1" for ::1 at 2019-03-26 09:33:07 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReward Load (0.3ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" INNER JOIN "user_rewards" ON "rewards"."id" = "user_rewards"."reward_id" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  [1m[36mDonation Load (0.9ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 84ms (Views: 73.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/1" for ::1 at 2019-03-26 09:33:07 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReward Load (0.2ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" INNER JOIN "user_rewards" ON "rewards"."id" = "user_rewards"."reward_id" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  [1m[36mDonation Load (0.3ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 94ms (Views: 86.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/1" for ::1 at 2019-03-26 09:33:07 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReward Load (0.4ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" INNER JOIN "user_rewards" ON "rewards"."id" = "user_rewards"."reward_id" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  [1m[36mDonation Load (0.3ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 84ms (Views: 77.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/1" for ::1 at 2019-03-26 09:33:17 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReward Load (0.3ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" INNER JOIN "user_rewards" ON "rewards"."id" = "user_rewards"."reward_id" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  [1m[36mDonation Load (0.2ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (93.5ms)
+Completed 200 OK in 408ms (Views: 359.9ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/users/1" for ::1 at 2019-03-26 09:33:24 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReward Load (0.2ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" INNER JOIN "user_rewards" ON "rewards"."id" = "user_rewards"."reward_id" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  [1m[36mDonation Load (0.2ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 68ms (Views: 58.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1" for ::1 at 2019-03-26 09:33:46 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReward Load (0.2ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" INNER JOIN "user_rewards" ON "rewards"."id" = "user_rewards"."reward_id" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  [1m[36mDonation Load (0.5ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (76.6ms)
+Completed 200 OK in 148ms (Views: 119.9ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/users/1" for ::1 at 2019-03-26 09:33:48 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReward Load (0.2ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" INNER JOIN "user_rewards" ON "rewards"."id" = "user_rewards"."reward_id" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  [1m[36mDonation Load (0.2ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 93ms (Views: 82.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1" for ::1 at 2019-03-26 09:33:57 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReward Load (0.2ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" INNER JOIN "user_rewards" ON "rewards"."id" = "user_rewards"."reward_id" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  [1m[36mDonation Load (0.5ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:4
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (109.7ms)
+Completed 200 OK in 436ms (Views: 388.4ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/users/1" for ::1 at 2019-03-26 09:35:33 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUserReward Load (0.2ms)[0m  [1m[34mSELECT  "user_rewards".* FROM "user_rewards" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mDonation Load (0.2ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[36mReward Load (0.3ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" WHERE "rewards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 32.7ms)
+
+
+  
+NoMethodError (undefined method `<=' for true:TrueClass
+Did you mean?  <=>):
+  
+app/controllers/users_controller.rb:16:in `block in show'
+app/controllers/users_controller.rb:12:in `show'
+Started GET "/users/1" for ::1 at 2019-03-26 09:36:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUserReward Load (0.2ms)[0m  [1m[34mSELECT  "user_rewards".* FROM "user_rewards" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mDonation Load (0.3ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 6.4ms)
+
+
+  
+NoMethodError (undefined method `<=' for true:TrueClass
+Did you mean?  <=>):
+  
+app/controllers/users_controller.rb:17:in `show'
+Started GET "/users/1" for ::1 at 2019-03-26 09:37:02 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUserReward Load (0.2ms)[0m  [1m[34mSELECT  "user_rewards".* FROM "user_rewards" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mDonation Load (0.3ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 500 Internal Server Error in 140201ms (ActiveRecord: 3.3ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/users_controller.rb:16:in `show'
+Started GET "/users/1" for ::1 at 2019-03-26 09:39:27 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUserReward Load (1.9ms)[0m  [1m[34mSELECT  "user_rewards".* FROM "user_rewards" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mDonation Load (2.3ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 500 Internal Server Error in 121480ms (ActiveRecord: 27.3ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/users_controller.rb:16:in `show'
+Started GET "/users/1" for ::1 at 2019-03-26 09:41:35 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUserReward Load (3.2ms)[0m  [1m[34mSELECT  "user_rewards".* FROM "user_rewards" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mDonation Load (1.8ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 500 Internal Server Error in 593ms (ActiveRecord: 33.8ms)
+
+
+  
+NoMethodError (undefined method `<' for true:TrueClass):
+  
+app/controllers/users_controller.rb:17:in `show'
+Started GET "/users/1" for ::1 at 2019-03-26 09:42:07 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUserReward Load (10.4ms)[0m  [1m[34mSELECT  "user_rewards".* FROM "user_rewards" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mDonation Load (1.9ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 500 Internal Server Error in 749ms (ActiveRecord: 40.8ms)
+
+
+  
+NoMethodError (undefined method `<' for true:TrueClass):
+  
+app/controllers/users_controller.rb:18:in `show'
+Started GET "/users/1" for ::1 at 2019-03-26 09:42:31 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUserReward Load (1.6ms)[0m  [1m[34mSELECT  "user_rewards".* FROM "user_rewards" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mDonation Load (1.9ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 500 Internal Server Error in 632ms (ActiveRecord: 31.0ms)
+
+
+  
+NoMethodError (undefined method `<' for true:TrueClass):
+  
+app/controllers/users_controller.rb:18:in `show'
+Started GET "/users/1" for ::1 at 2019-03-26 09:42:55 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUserReward Load (1.6ms)[0m  [1m[34mSELECT  "user_rewards".* FROM "user_rewards" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mDonation Load (2.3ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mReward Load (0.3ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" WHERE "rewards"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mUserReward Update (0.8ms)[0m  [1m[33mUPDATE "user_rewards" SET "reward_id" = ?, "updated_at" = ? WHERE "user_rewards"."id" = ?[0m  [["reward_id", 4], ["updated_at", "2019-03-26 14:43:45.249293"], ["id", 1]]
+  ↳ (byebug):1
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (byebug):1
+Completed 500 Internal Server Error in 125149ms (ActiveRecord: 54.3ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/users_controller.rb:16:in `show'
+Started GET "/users/1" for ::1 at 2019-03-26 09:45:07 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUserReward Load (3.5ms)[0m  [1m[34mSELECT  "user_rewards".* FROM "user_rewards" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mDonation Load (2.0ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 500 Internal Server Error in 28508ms (ActiveRecord: 44.7ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block in show'
+app/controllers/users_controller.rb:15:in `block in show'
+app/controllers/users_controller.rb:12:in `show'
+Started GET "/users/1" for ::1 at 2019-03-26 09:47:35 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUserReward Load (0.3ms)[0m  [1m[34mSELECT  "user_rewards".* FROM "user_rewards" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mDonation Load (0.2ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mReward Load (0.6ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" WHERE "rewards"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mUserReward Update (1.6ms)[0m  [1m[33mUPDATE "user_rewards" SET "reward_id" = ?, "updated_at" = ? WHERE "user_rewards"."id" = ?[0m  [["reward_id", 1], ["updated_at", "2019-03-26 14:48:25.872519"], ["id", 1]]
+  ↳ (byebug):1
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (byebug):1
+Completed 500 Internal Server Error in 94050ms (ActiveRecord: 9.4ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/users_controller.rb:16:in `show'
+Started GET "/users/1" for ::1 at 2019-03-26 09:49:12 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUserReward Load (6.0ms)[0m  [1m[34mSELECT  "user_rewards".* FROM "user_rewards" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mDonation Load (5.1ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Completed 500 Internal Server Error in 563ms (ActiveRecord: 39.3ms)
+
+
+  
+NoMethodError (undefined method `<' for true:TrueClass):
+  
+app/controllers/users_controller.rb:17:in `show'
+Started GET "/users/1" for ::1 at 2019-03-26 09:50:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUserReward Load (1.6ms)[0m  [1m[34mSELECT  "user_rewards".* FROM "user_rewards" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mDonation Load (1.9ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (1.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mReward Load (2.1ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" WHERE "rewards"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[36mUserReward Update (2.3ms)[0m  [1m[33mUPDATE "user_rewards" SET "reward_id" = ?, "updated_at" = ? WHERE "user_rewards"."id" = ?[0m  [["reward_id", 4], ["updated_at", "2019-03-26 14:50:23.863787"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:22
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReward Load (1.6ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" INNER JOIN "user_rewards" ON "rewards"."id" = "user_rewards"."reward_id" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  [1m[36mCharity Load (1.6ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (1.8ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (2.4ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (1.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (2.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (4.6ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (555.5ms)
+Completed 200 OK in 4974ms (Views: 4061.7ms | ActiveRecord: 76.8ms)
+
+
+Started GET "/users/1" for ::1 at 2019-03-26 09:50:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUserReward Load (2.3ms)[0m  [1m[34mSELECT  "user_rewards".* FROM "user_rewards" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mDonation Load (1.8ms)[0m  [1m[34mSELECT "donations".* FROM "donations" WHERE "donations"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (1.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mReward Load (1.8ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" WHERE "rewards"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  [1m[36mUserReward Update (2.6ms)[0m  [1m[33mUPDATE "user_rewards" SET "reward_id" = ?, "updated_at" = ? WHERE "user_rewards"."id" = ?[0m  [["reward_id", 2], ["updated_at", "2019-03-26 14:50:45.364542"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReward Load (1.5ms)[0m  [1m[34mSELECT  "rewards".* FROM "rewards" INNER JOIN "user_rewards" ON "rewards"."id" = "user_rewards"."reward_id" WHERE "user_rewards"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:2
+  [1m[36mCharity Load (1.8ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (5.6ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (1.7ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (1.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCharity Load (2.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mCACHE Charity Load (0.4ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (297.6ms)
+Completed 200 OK in 1130ms (Views: 867.5ms | ActiveRecord: 29.7ms)
+
+
