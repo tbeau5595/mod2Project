@@ -33,11 +33,11 @@ User.create(name: "Name 4", account_number: 3214567890)
 # end
 
 
-Charity.create(name: "Charity 1", description: "description")
-Charity.create(name: "Charity 2", description: "description")
-Charity.create(name: "Charity 3", description: "description")
-Charity.create(name: "Charity 4", description: "description")
-Charity.create(name: "Charity 5", description: "description")
+Charity.create(name: "James", description: "description", age: 15)
+Charity.create(name: "Pascasie", description: "description" ,age: 17)
+Charity.create(name: "Faida", description: "description", age: 12)
+Charity.create(name: "Alex", description: "description", age: 4)
+Charity.create(name: "Mutoni", description: "description",age: 5)
 
 Reward.create(level: "bronze")
 Reward.create(level: "silver")
